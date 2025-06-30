@@ -1,0 +1,194 @@
+<!-- Created with Jaspersoft Studio version 7.0.1.final using JasperReports Library version 7.0.1-573496633c2b4074e32f433154b543003f7d2498  -->
+<jasperReport name="studentMarks" language="java" columnCount="1" pageWidth="1300" pageHeight="842" columnWidth="1260" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="d804c0af-09f2-4b0c-8ffb-ad7e793199d5">
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="New Data Adapter"/>
+	<query language="SQL"><![CDATA[SELECT student.studentID, student.firstName, student.lastName, course.programme, result.result1, result.result2, result.result3,result.result4,result.result5,result.result6,result.result7,result.result8,result.result9,result.result10,result.result11, ROUND(((result.result1 + result.result2 + result.result3 + result.result4 + result.result5 + result.result6 + result.result7 + result.result8 + result.result9 + result.result10 + result.result11 )/11),2) AS averageResult FROM student INNER JOIN result ON student.studentID = result.studentID INNER JOIN course ON result.year = course.year AND result.programme = course.programme ORDER BY averageResult DESC;]]></query>
+	<field name="studentID" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="studentID"/>
+		<property name="com.jaspersoft.studio.field.label" value="studentID"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="firstName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="firstName"/>
+		<property name="com.jaspersoft.studio.field.label" value="firstName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="lastName" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="lastName"/>
+		<property name="com.jaspersoft.studio.field.label" value="lastName"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="student"/>
+	</field>
+	<field name="programme" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="programme"/>
+		<property name="com.jaspersoft.studio.field.label" value="programme"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="course"/>
+	</field>
+	<field name="result1" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="result1"/>
+		<property name="com.jaspersoft.studio.field.label" value="result1"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="result"/>
+	</field>
+	<field name="result2" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="result2"/>
+		<property name="com.jaspersoft.studio.field.label" value="result2"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="result"/>
+	</field>
+	<field name="result3" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="result3"/>
+		<property name="com.jaspersoft.studio.field.label" value="result3"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="result"/>
+	</field>
+	<field name="result4" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="result4"/>
+		<property name="com.jaspersoft.studio.field.label" value="result4"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="result"/>
+	</field>
+	<field name="result5" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="result5"/>
+		<property name="com.jaspersoft.studio.field.label" value="result5"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="result"/>
+	</field>
+	<field name="result6" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="result6"/>
+		<property name="com.jaspersoft.studio.field.label" value="result6"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="result"/>
+	</field>
+	<field name="result7" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="result7"/>
+		<property name="com.jaspersoft.studio.field.label" value="result7"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="result"/>
+	</field>
+	<field name="result8" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="result8"/>
+		<property name="com.jaspersoft.studio.field.label" value="result8"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="result"/>
+	</field>
+	<field name="result9" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="result9"/>
+		<property name="com.jaspersoft.studio.field.label" value="result9"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="result"/>
+	</field>
+	<field name="result10" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="result10"/>
+		<property name="com.jaspersoft.studio.field.label" value="result10"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="result"/>
+	</field>
+	<field name="result11" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="result11"/>
+		<property name="com.jaspersoft.studio.field.label" value="result11"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="result"/>
+	</field>
+	<field name="averageResult" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="averageResult"/>
+		<property name="com.jaspersoft.studio.field.label" value="averageResult"/>
+	</field>
+	<background splitType="Stretch"/>
+	<title height="48" splitType="Stretch">
+		<element kind="staticText" uuid="9a93feda-8464-4ee6-a23b-213e2e402cc9" x="460" y="10" width="214" height="30" fontSize="20.0" bold="true">
+			<text><![CDATA[Student Marks]]></text>
+		</element>
+	</title>
+	<pageHeader height="38" splitType="Stretch"/>
+	<columnHeader height="55" splitType="Stretch">
+		<element kind="staticText" uuid="994d1f42-17e0-4dd1-96ac-6c90b7228048" x="0" y="10" width="34" height="30" fontSize="18.0">
+			<text><![CDATA[ID]]></text>
+		</element>
+		<element kind="staticText" uuid="84a14b53-8e4e-408e-9f3c-24180ea44416" x="34" y="12" width="59" height="30" fontSize="18.0">
+			<text><![CDATA[Name]]></text>
+		</element>
+		<element kind="line" uuid="0b98a4e4-f48e-4775-8a37-69bb8b06ebaf" x="-2" y="40" width="1282" height="2"/>
+		<element kind="staticText" uuid="d426191b-172d-4ace-ae84-a703903ec50f" x="200" y="12" width="79" height="30" fontSize="18.0">
+			<text><![CDATA[Module1]]></text>
+		</element>
+		<element kind="staticText" uuid="bd423b94-52b7-42f2-8186-a49487c20b3d" x="290" y="10" width="79" height="30" fontSize="18.0">
+			<text><![CDATA[Module2]]></text>
+		</element>
+		<element kind="staticText" uuid="ba448457-de85-4bf0-b96c-c5fcdff54ab1" x="390" y="12" width="79" height="30" fontSize="18.0">
+			<text><![CDATA[Module3]]></text>
+		</element>
+		<element kind="staticText" uuid="5bcfe505-d650-491c-9e22-94e2c6fc35cc" x="470" y="12" width="79" height="30" fontSize="18.0">
+			<text><![CDATA[Module4]]></text>
+		</element>
+		<element kind="staticText" uuid="75024111-d01e-4a30-acd5-513b20df3428" x="560" y="10" width="79" height="30" fontSize="18.0">
+			<text><![CDATA[Module5]]></text>
+		</element>
+		<element kind="staticText" uuid="69165599-4a16-4dce-ae9e-d41b36bf6435" x="650" y="10" width="79" height="30" fontSize="18.0">
+			<text><![CDATA[Module6]]></text>
+		</element>
+		<element kind="staticText" uuid="d25a970b-7ee0-4c94-b771-0de3f1362791" x="740" y="10" width="79" height="30" fontSize="18.0">
+			<text><![CDATA[Module7]]></text>
+		</element>
+		<element kind="staticText" uuid="93cf4fdb-0030-42d4-8125-0dcc1317d7e3" x="831" y="10" width="79" height="30" fontSize="18.0">
+			<text><![CDATA[Module8]]></text>
+		</element>
+		<element kind="staticText" uuid="43ae9228-aed3-48c7-9447-8f585b71f977" x="920" y="10" width="79" height="30" fontSize="18.0">
+			<text><![CDATA[Module9]]></text>
+		</element>
+		<element kind="staticText" uuid="e9e1bb50-c4af-4781-897a-7a29c07c5914" x="1000" y="10" width="100" height="30" fontSize="18.0">
+			<text><![CDATA[Module10]]></text>
+		</element>
+		<element kind="staticText" uuid="60c8945c-b145-4f46-911f-dc4e263ae209" x="1089" y="10" width="91" height="30" fontSize="18.0">
+			<text><![CDATA[Module11]]></text>
+		</element>
+		<element kind="staticText" uuid="992aa89c-b8a9-43ab-9dc1-405fccbc84ca" x="1190" y="12" width="91" height="30" fontSize="18.0">
+			<text><![CDATA[Average]]></text>
+		</element>
+		<element kind="staticText" uuid="b0e369bb-691f-4f3b-a8e2-437af041ce8e" x="100" y="12" width="100" height="30" fontSize="18.0">
+			<text><![CDATA[Programme]]></text>
+		</element>
+	</columnHeader>
+	<detail>
+		<band height="51" splitType="Stretch">
+			<element kind="textField" uuid="9cdca760-32fe-4720-8694-d034a74f22a3" x="5" y="4" width="29" height="30">
+				<expression><![CDATA[$F{studentID}]]></expression>
+			</element>
+			<element kind="line" uuid="4fee7b8f-9cc8-4eb2-8f44-12f2746cb246" x="0" y="34" width="1279" height="1"/>
+			<element kind="textField" uuid="a0238651-1b0b-432a-9758-81a408f5f778" x="48" y="4" width="52" height="30">
+				<expression><![CDATA[$F{firstName} + " " + $F{lastName}]]></expression>
+			</element>
+			<element kind="textField" uuid="f5074760-c584-4ab3-8be4-9a164ca7f052" x="200" y="10" width="29" height="30">
+				<expression><![CDATA[$F{result1}]]></expression>
+			</element>
+			<element kind="textField" uuid="d38c3a73-6c76-4d53-90b7-886db494f08b" x="290" y="10" width="29" height="30">
+				<expression><![CDATA[$F{result2}]]></expression>
+			</element>
+			<element kind="textField" uuid="e46272e7-97b0-4fe6-809c-f027d0e2a2d2" x="390" y="10" width="29" height="30">
+				<expression><![CDATA[$F{result3}]]></expression>
+			</element>
+			<element kind="textField" uuid="ea74afea-4f1c-4404-bda9-22e2a9c16ea4" x="470" y="10" width="29" height="30">
+				<expression><![CDATA[$F{result4}]]></expression>
+			</element>
+			<element kind="textField" uuid="8f54f7f3-004c-4fff-8537-465493074362" x="560" y="10" width="29" height="30">
+				<expression><![CDATA[$F{result5}]]></expression>
+			</element>
+			<element kind="textField" uuid="7648fd7a-384e-47da-9e4c-e1e17ae468b8" x="650" y="5" width="29" height="30">
+				<expression><![CDATA[$F{result6}]]></expression>
+			</element>
+			<element kind="textField" uuid="b0e3575e-d87d-4b5a-b532-88ea789c49d1" x="740" y="5" width="29" height="30">
+				<expression><![CDATA[$F{result7}]]></expression>
+			</element>
+			<element kind="textField" uuid="19a86bd2-4d45-4376-b33e-690428670d37" x="831" y="10" width="29" height="30">
+				<expression><![CDATA[$F{result8}]]></expression>
+			</element>
+			<element kind="textField" uuid="ab200a81-eec3-4916-9347-79781d20ba0e" x="920" y="10" width="29" height="30">
+				<expression><![CDATA[$F{result9}]]></expression>
+			</element>
+			<element kind="textField" uuid="036715eb-829c-4d56-aa3a-abac12a3fc6f" x="1000" y="10" width="29" height="30">
+				<expression><![CDATA[$F{result10}]]></expression>
+			</element>
+			<element kind="textField" uuid="47b32891-265a-4165-83ab-41ff20e35993" x="1089" y="10" width="29" height="30">
+				<expression><![CDATA[$F{result10}]]></expression>
+			</element>
+			<element kind="textField" uuid="d4ff7b19-56b8-437e-81b0-c92a05383f05" x="1190" y="4" width="29" height="30">
+				<expression><![CDATA[$F{averageResult}]]></expression>
+			</element>
+			<element kind="line" uuid="0a145444-5882-4198-bc7e-c414df0e4b0c" x="1180" y="-55" width="1" height="94"/>
+			<element kind="textField" uuid="9f4db01d-5fc9-4865-b95e-0a657437faa5" x="120" y="4" width="29" height="30">
+				<expression><![CDATA[$F{programme}]]></expression>
+			</element>
+		</band>
+	</detail>
+	<columnFooter height="45" splitType="Stretch"/>
+	<pageFooter height="54" splitType="Stretch"/>
+	<summary height="42" splitType="Stretch"/>
+</jasperReport>
